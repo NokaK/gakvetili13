@@ -1,0 +1,18 @@
+@import './variable.scss';
+
+@mixin  flex-direction ($horizontal,$vertical){
+    justify-content: $horizontal;
+    align-items: $vertical;
+}
+@mixin size ($width){
+    @if $width == 100px {
+        background-color:$color04;
+        width:100px;
+    }@else if  $width == 200px {
+        background-color:$color01;
+        width:200px;
+    }@else {
+        background-color:$color02;
+        width:500px;
+    }
+}

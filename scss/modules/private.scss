@@ -1,0 +1,13 @@
+@import './variable.scss';
+
+%flex {
+    display:flex;
+}
+%title-style {
+    color:$color02;
+    font-size: $size03;
+    background-color:$color05;
+    line-height: $size03;
+    text-align: center;
+    margin:$size03;
+}

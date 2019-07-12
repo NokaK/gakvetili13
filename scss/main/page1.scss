@@ -1,0 +1,44 @@
+@import '../basic/reset.scss';
+@import '../basic/fonts.scss';
+@import '../modules/variable.scss';
+@import '../modules/private.scss';
+@import '../modules/mixins.scss';
+@import '../modules/functions.scss';
+
+.section1 {
+    @extend  %title-style;
+    @for $i from 1 through 6 {
+        li:nth-child(#{$i}) {
+            color: nth($rainbow, $i);
+        }
+    }
+    
+    .boxes{
+        @extend %flex;
+        @include flex-direction (space-between,center);
+        @media screen and (max-width:1024px){
+            @include flex-direction (center,center);
+        }
+        .box{
+            height: $size01;
+            @include size (500px);
+            &:nth-child(2){
+                @include size (200px);
+            }
+            &:nth-child(3){
+                @include size (100px);
+
+            }
+        }
+    }
+}
+.section2{
+    @extend  %title-style;
+    width: fun(600px,400px);
+    @media screen and (max-width:1024px){
+        width: fun(100px,50px);
+    }
+}
+.section3{
+    @extend  %title-style;
+}
